@@ -1,8 +1,7 @@
-# based on the information from this course's TA - CodeBook.md contains info on the final data set ("step5result.txt"), README.md contains info on the analysis and manipulations of the initial data set.
+# Getting and Cleaning Data Course Project
+This file describes the variables, the data, and any transformations or work that I performed to clean up the data.
 
-### DATA DICTIONARY - Getting and Cleaning Data Course Project
-# ref: https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf
-
+## DATA DICTIONARY 
 
 | # | Variable     | Var Description                     | Value                | Val Description                              |
 |:-:|:------------ |:------------------------------------|:---------------------|:---------------------------------------------|
@@ -13,9 +12,9 @@
 |   |              |                                     | SITTING              |.number 4|
 |   |              |                                     | STANDING             |.number 5|
 |   |              |                                     | LAYING               |.number 6|
-|:-:|:------------ |:------------------------------------|:---------------------|:---------------------------------------------|                
+|---|------------- |-------------------------------------|----------------------|-----------------------------------------------|                
 | 2 | Subject      | subject number |1-30|    .Unique identifier assigned to each volumteed within this study, integer|
-|:-:|:------------ |:------------------------------------|:---------------------|:---------------------------------------------|                 
+|---|--------------| ------------------------------------| ---------------------|-----------------------------------------------|                 
 | 3 | Feature      | mean and standard deviation calculations for each of 66 features for eah activity and each subject based on mesurements collected for the initial study|
 ||||                tBodyAccMeanX|           .1| initial number from "features.txt"|
 ||||                tBodyAccMeanY|          .2|
@@ -83,7 +82,7 @@
 ||||                fBodyGyroMagStd     |    .530|
 ||||                fBodyGyroJerkMagMean|    .542|
 ||||                fBodyGyroJerkMagStd |    .543 | 
-|:-:|:------------ |:------------------------------------|:---------------------|:---------------------------------------------|                 
+|---|------------- |-------------------------------------|----------------------|----------------------------------------------|                 
 | 4 |Mean| mean value of the initial measurements calculated for each feature for each activity for each subject| | |
                 
 
