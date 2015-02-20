@@ -3,18 +3,16 @@ This file describes the variables, the data, and any transformations or work tha
 
 ## DATA DICTIONARY 
 
-| # | Variable     | Var Description                     | Value                | Val Description                              |
-|:-:|:------------ |:------------------------------------|:---------------------|:---------------------------------------------|
+| # | Variable     | Var Description          | Value                | Val Description                              |
+|:-:|:------------ |:-------------------------|:---------------------|:---------------------------------------------|
 | 1 | Activity     | activity performed by the subject   |                      |
 |   |              |                                     | WALKING              |.number 1 from activity_labels.txt|
 |   |              |                                     | WALKING_UPSTAIRS     |.number 2| 
 |   |              |                                     | WALKING_DOWNSTAIRS   |.number 3|
 |   |              |                                     | SITTING              |.number 4|
 |   |              |                                     | STANDING             |.number 5|
-|   |              |                                     | LAYING               |.number 6|
-|---|------------- |-------------------------------------|----------------------|-----------------------------------------------|                
-| 2 | Subject      | subject number |1-30|    .Unique identifier assigned to each volumteed within this study, integer|
-|---|--------------| ------------------------------------| ---------------------|-----------------------------------------------|                 
+|   |              |                                     | LAYING               |.number 6|              
+| 2 | Subject      | subject number |1-30|    .Unique identifier assigned to each volumteed within this study, integer|               
 | 3 | Feature      | mean and standard deviation calculations for each of 66 features for eah activity and each subject based on mesurements collected for the initial study|
 ||||                tBodyAccMeanX|           .1| initial number from "features.txt"|
 ||||                tBodyAccMeanY|          .2|
@@ -81,8 +79,7 @@ This file describes the variables, the data, and any transformations or work tha
 ||||                fBodyGyroMagMean    |    .529|
 ||||                fBodyGyroMagStd     |    .530|
 ||||                fBodyGyroJerkMagMean|    .542|
-||||                fBodyGyroJerkMagStd |    .543 | 
-|---|------------- |-------------------------------------|----------------------|----------------------------------------------|                 
+||||                fBodyGyroJerkMagStd |    .543 |                 
 | 4 |Mean| mean value of the initial measurements calculated for each feature for each activity for each subject| | |
                 
 
