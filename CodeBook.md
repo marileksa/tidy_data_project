@@ -88,7 +88,7 @@ Only subset of 8 files from the *.zip was used to modify the data in order to co
 |   |              |                                     | STANDING             |.number 5|
 |   |              |                                     | LAYING               |.number 6|              
 | 2 | Subject      | subject number |1-30|    .Unique identifier assigned to each volunteer within this study, integer|               
-| 3 | Feature      | one of the 66 feature variable names selected out of the 561 items listed in "features.txt" based on information provided in "features_info.txt"|tBodyAccMeanX|           .1| initial number from "features.txt"|
+| 3 | Feature      | one of the 66 feature variable names selected out of the 561 items listed in "features.txt" based on information provided in "features_info.txt"|tBodyAccMeanX|           .1 - initial number from "features.txt"|
 ||||                tBodyAccMeanY|          .2|
 ||||                tBodyAccMeanZ|           .3|
 ||||                tBodyAccStdX|            .4|
