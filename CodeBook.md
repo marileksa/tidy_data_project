@@ -34,14 +34,12 @@ The *.zip file was unzipped into directory "UCI_HAR_Dataset".
 * 17. fBodyGyroJerkMag
 
 #### Calculation of the expected number of feature variables 
-9 measurements ('*.Mag') correspond to 18 variables from "features.txt" since we need to select std() and mean() for each measurement
-8 measurements ('*.XYZ') correspond to 48 variables since we need to select 3 (X,Y and Z) by 2 ( functions ) for each measurement
-* total number of variables selected from the features.txt: 66
+Since the 9 measurements ('*.Mag') correspond to 18 variables from "features.txt" and we need to select std() and mean() for each measurement
+and the 8 measurements ('*.XYZ') correspond to 48 variables and we need to select 3 (X,Y and Z) by 2 ( functions ) for each measurement, the total number of variables selected from the features.txt is 66
 
 #### Calculation of the expected number of observations in the final tidy data set
-Since there were 66 variables for each of the 30 subjects for each of the 6 activities 
-the expected number of observations: 
-* 66 x 180 = 11,880 ( see "step5result.txt" )  
+Since there are 66 variables for each of the 30 subjects for each of the 6 activities 
+the expected number of observations: 66 x 180 = 11,880 ( see "step5result.txt" )  
 
 #### Analysis of the initial data files
 Only subset of 8 files from the *.zip was used to modify the data in order to complete this project.
@@ -74,16 +72,14 @@ Only subset of 8 files from the *.zip was used to modify the data in order to co
 
 | # | Variable     | Var Description          | Value                | Val Description                              |
 |:-:|:------------ |:-------------------------|:---------------------|:---------------------------------------------|
-| 1 | Activity     | activity performed by the subject   |                      |
-|   |              |                                     | WALKING              |.number 1 from activity_labels.txt|
+| 1 | Activity     | activity performed by the subject   | WALKING              |.number 1 from activity_labels.txt|
 |   |              |                                     | WALKING_UPSTAIRS     |.number 2| 
 |   |              |                                     | WALKING_DOWNSTAIRS   |.number 3|
 |   |              |                                     | SITTING              |.number 4|
 |   |              |                                     | STANDING             |.number 5|
 |   |              |                                     | LAYING               |.number 6|              
-| 2 | Subject      | subject number |1-30|    .Unique identifier assigned to each volumteed within this study, integer|               
-| 3 | Feature      | mean and standard deviation calculations for each of 66 features for eah activity and each subject based on mesurements collected for the initial study|
-||||                tBodyAccMeanX|           .1| initial number from "features.txt"|
+| 2 | Subject      | subject number |1-30|    .Unique identifier assigned to each volunteer within this study, integer|               
+| 3 | Feature      | mean and standard deviation calculations for each of 66 features for eah activity and each subject based on mesurements collected for the initial study|tBodyAccMeanX|           .1| initial number from "features.txt"|
 ||||                tBodyAccMeanY|          .2|
 ||||                tBodyAccMeanZ|           .3|
 ||||                tBodyAccStdX|            .4|
