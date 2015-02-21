@@ -37,13 +37,28 @@ get_variables <- function() {
 
 ####################################################################################################
 # STEP 2.b. Select only signficant columns from X_test or X_train data 
-# using vector of indeces of features, rename column names using vector of varible names of features
+# using vector of column numbers of 66 features, 
+# rename column names using vector of varible names of features
 ####################################################################################################
-select_rename_columns <- function(X_file, selected_features) {
+select_rename_columns <- function(X_file) {
         
         selected_features <- get_variables()
         
-        subset_X_file <- X_file[,selected_features$V1]      
+        subset_X_file <- X_file[,selected_features$V1] 
+        
+        # expected: selection of the 66 columns preserving values, checking
+        # ...
+        # 65 542 fBodyGyroJerkMagMean
+        # 66 543  fBodyGyroJerkMagStd
+        
+        # > X_test[1,542:543]
+        # V542       V543
+        # 1 -0.8901655 -0.9073076
+        
+        # > subset_X_test[1,65:66]
+        #V542       V543
+        #1 -0.8901655 -0.9073076
+        
         colnames(subset_X_file) <- selected_features$V2        
         return(subset_X_file)
 }
