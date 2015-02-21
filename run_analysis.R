@@ -18,7 +18,7 @@ get_variables <- function() {
         # select variables with 2 patterns 'std()' and 'mean()'
         trimmed_features <- rbind(features[grep('-std[()]', features$V2 ), ], features[grep('-mean[()]', features$V2 ), ])
         
-        # modify variable names for better readibility
+        # modify variable names removing '(',')','-' chars and capitalizing 'Mean' and 'Std'
         t1 <- gsub('mean','Mean', trimmed_features$V2)
         t2 <- gsub('std','Std', t1)
         t3 <- gsub('[-()]','', t2)
