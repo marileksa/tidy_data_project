@@ -1,49 +1,47 @@
-# Getting and Cleaning Data Course Project
+## Getting and Cleaning Data Course Project
 This file describes the variables, the data, and any transformations or work that I performed to clean up the data.
 
-The initial data for this project was obtained from: 
+The initial data file for this project was obtained from: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-These data were initially collected for project: "Human Activity Recognition Using Smartphones"
+The set of data was initially collected for project: "Human Activity Recognition Using Smartphones"
 A full description is available at the site: 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
-The *.zip file was unzipped into directory "UCI_HAR_Dataset. 
+The *.zip file was unzipped into directory "UCI_HAR_Dataset". 
 
 2 files were examined to understand the provided data:
 * README.txt
 * features_info.txt
 
 The initial set of measurements contains 17 items ("features_info.txt)
-1. tBodyAcc-XYZ
-2. tGravityAcc-XYZ
-3. tBodyAccJerk-XYZ
-4. tBodyGyro-XYZ
-5. tBodyGyroJerk-XYZ
-6. tBodyAccMag
-7. tGravityAccMag
-8. tBodyAccJerkMag
-9. tBodyGyroMag
-10. tBodyGyroJerkMag
-11. fBodyAcc-XYZ
-12. fBodyAccJerk-XYZ
-13. fBodyGyro-XYZ
-14. fBodyAccMag
-15. fBodyAccJerkMag
-16. fBodyGyroMag
-17. fBodyGyroJerkMag
+* 1. tBodyAcc-XYZ
+* 2. tGravityAcc-XYZ
+* 3. tBodyAccJerk-XYZ
+* 4. tBodyGyro-XYZ
+* 5. tBodyGyroJerk-XYZ
+* 6. tBodyAccMag
+* 7. tGravityAccMag
+* 8. tBodyAccJerkMag
+* 9. tBodyGyroMag
+* 10. tBodyGyroJerkMag
+* 11. fBodyAcc-XYZ
+* 12. fBodyAccJerk-XYZ
+* 13. fBodyGyro-XYZ
+* 14. fBodyAccMag
+* 15. fBodyAccJerkMag
+* 16. fBodyGyroMag
+* 17. fBodyGyroJerkMag
 
 9 measurements ('*.Mag') correspond to 18 variables from "features.txt" since we need to select std() and mean() for each measurement
 8 measurements ('*.XYZ') correspond to 48 variables since we need to select 3 (X,Y and Z) by 2 ( functions ) for each measurement
---------------------------------------------------------
-total number of variables selected from features.txt: 66
+* total number of variables selected from features.txt: 66
 
 Since there were 66 variables for each of the 30 subjects for each of the 6 activities 
-the expected number of observations: 66 x 180 = 11,880 ( see "step5result.txt" )  
-
+the expected number of observations: 
+* 66 x 180 = 11,880 ( see "step5result.txt" )  
 
 Only subset of 8 files from the *.zip was used to modify the data in order to complete this project.
-------------------------------------------------------------------------------------------------------
 * UCI_HAR_Dataset/features.txt - loaded as
 'data.frame':        561 obs. of  2 variables:
 
@@ -148,6 +146,6 @@ Only subset of 8 files from the *.zip was used to modify the data in order to co
 ||||                fBodyGyroMagStd     |    .530|
 ||||                fBodyGyroJerkMagMean|    .542|
 ||||                fBodyGyroJerkMagStd |    .543 |                 
-| 4 |Mean| mean value of the initial measurements calculated for each feature for each activity for each subject| |signed real number |
+| 4 |Mean| mean value of the initial measurements calculated for each feature for each activity for each subject|-0.9976661 to 0.9745087 |signed real number |
                 
 
