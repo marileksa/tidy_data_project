@@ -14,7 +14,7 @@ The *.zip file was unzipped into directory "UCI_HAR_Dataset".
 * README.txt
 * features_info.txt
 
-The initial set of measurements contains 17 items ("features_info.txt)
+#### Initial set of measurements contains 17 items ("features_info.txt")
 * 1. tBodyAcc-XYZ
 * 2. tGravityAcc-XYZ
 * 3. tBodyAccJerk-XYZ
@@ -33,14 +33,17 @@ The initial set of measurements contains 17 items ("features_info.txt)
 * 16. fBodyGyroMag
 * 17. fBodyGyroJerkMag
 
+#### Calculation of the expected number of feature variables 
 9 measurements ('*.Mag') correspond to 18 variables from "features.txt" since we need to select std() and mean() for each measurement
 8 measurements ('*.XYZ') correspond to 48 variables since we need to select 3 (X,Y and Z) by 2 ( functions ) for each measurement
-* total number of variables selected from features.txt: 66
+* total number of variables selected from the features.txt: 66
 
+#### Calculation of the expected number of observations in the final tidy data set
 Since there were 66 variables for each of the 30 subjects for each of the 6 activities 
 the expected number of observations: 
 * 66 x 180 = 11,880 ( see "step5result.txt" )  
 
+#### Analysis of the initial data files
 Only subset of 8 files from the *.zip was used to modify the data in order to complete this project.
 * UCI_HAR_Dataset/features.txt - loaded as
 'data.frame':        561 obs. of  2 variables:
@@ -67,7 +70,7 @@ Only subset of 8 files from the *.zip was used to modify the data in order to co
 'data.frame':        7352 obs. of  1 variable:
 
 
-### DATA DICTIONARY 
+#### Data Dictionary
 
 | # | Variable     | Var Description          | Value                | Val Description                              |
 |:-:|:------------ |:-------------------------|:---------------------|:---------------------------------------------|
