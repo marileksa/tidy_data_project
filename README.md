@@ -13,14 +13,14 @@ in an unzipped UCI_HAR_Dataset folder
 
 * loads 8 files ( see CodeBook.md ) into data frames
 
-for each of the 2 sets of data frames ( X_train / X_test )
-* selects a set of features (66) based on two patterns 'std()' and 'mean()' in variable names
-* modifies variable names removing '(',')','-' chars, capitalizing 'Mean' and 'Std' and correcting BodyBody to Body to match the specs
-* uses the selected set of features to select subset of data resulting in 66 column with features as column names
+* for each of the 2 sets of data frames ( X_train / X_test )
+selects a set of features (66) based on two patterns 'std()' and 'mean()' in variable names,
+modifies variable names removing '(',')','-' chars, capitalizing 'Mean' and 'Std' and correcting BodyBody to Body to match the specs,
+uses the selected set of features to select subset of data resulting in 66 column with features as column names
 
-for each of the 2 sets of data frames ( X_train, y_train, subject_train / X_test, y_test, subject_test)
-* merges data "vertically" by binding columns in 3 data frames
-* replaces activity numbers with activity labels
+* for each of the 2 sets of data frames ( X_train, y_train, subject_train / X_test, y_test, subject_test)
+merges data "vertically" by binding columns in 3 data frames, 
+replaces activity numbers with activity labels
 
 * merges train and test "horizontally" by binding rows
 
@@ -36,8 +36,8 @@ for each of the 2 sets of data frames ( X_train, y_train, subject_train / X_test
 * there are no duplicate columns
 * there are no NA's 
 
-* all(colSums(is.na(result)) == 0)
-* [1] TRUE
+> all(colSums(is.na(result)) == 0)
+> [1] TRUE
 
 #### stats for final data frame:
 * 'data.frame':        11880 obs. of  4 variables:

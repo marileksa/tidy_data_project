@@ -1,7 +1,7 @@
 ##################################################################################################
 # run_analysis.R 
-# input: 8 files, see list of files in CodeBook.md
-# output - tidy data for this project "step5result.txt"
+# input:  - 8 files, see list of files in CodeBook.md
+# output: - tidy data for this project "step5result.txt"
 ##################################################################################################
 
 setwd("~/tidy_data_project/")
@@ -64,7 +64,7 @@ label_with_activity <- function(y_file) {
         return(y_file)      
 }
 #################################################################################################
-# STEP 1. Merges the training and the test sets to create one data set.
+# STEP 1-3
 #################################################################################################
 combine_vertical_data <- function( X_file, y_file, subject) {
         # using custom function to replace 1-6 with one of 6 strings from activity_labels.txt
@@ -87,7 +87,7 @@ combine_vertical_data <- function( X_file, y_file, subject) {
 }
 
 #################################################################################################
-# STEP 1. Merges the training and the test sets to create one data set.
+# STEPS 1-4
 #################################################################################################
 combine_horizontal_data <- function() {   
       
