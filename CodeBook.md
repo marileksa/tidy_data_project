@@ -156,4 +156,10 @@ Only subset of 8 files from the *.zip was used to modify the data in order to co
 ||||                fBodyGyroJerkMagStd |    .543 |                 
 | 4 |Mean| mean value of the initial measurements calculated for each feature for each activity for each subject|-0.9976661 to 0.9745087 |signed real number |
                 
+* NOTE: the range of values for variable 'Mean' was obtained y applying max() and mean() functions to 11,880 observations
+* > min(data$Mean)
+* [1] -0.9976661
+* > max(data$Mean)
+* [1] 0.9745087
+
 
