@@ -88,7 +88,7 @@ Only subset of 8 files from the *.zip was used to modify the data in order to co
 |   |              |                                     | STANDING             |.number 5|
 |   |              |                                     | LAYING               |.number 6|              
 | 2 | Subject      | subject number |1-30|    .Unique identifier assigned to each volunteer within this study, integer|               
-| 3 | Feature      | mean and standard deviation calculations for each of 66 features for eah activity and each subject based on mesurements collected for the initial study|tBodyAccMeanX|           .1| initial number from "features.txt"|
+| 3 | Feature      | one of 66 feature variable names selected out of 561 items listed in "features.txt" based on information provided in "feature_info.txt"|tBodyAccMeanX|           .1| initial number from "features.txt"|
 ||||                tBodyAccMeanY|          .2|
 ||||                tBodyAccMeanZ|           .3|
 ||||                tBodyAccStdX|            .4|
