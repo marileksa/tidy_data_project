@@ -1,7 +1,75 @@
 # Getting and Cleaning Data Course Project
 This file describes the variables, the data, and any transformations or work that I performed to clean up the data.
 
-## DATA DICTIONARY 
+The initial data for this project was obtained from: 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+These data were initially collected for project: "Human Activity Recognition Using Smartphones"
+A full description is available at the site: 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+The *.zip file was unzipped into directory "UCI_HAR_Dataset. 
+
+2 files were examined to understand the provided data:
+* README.txt
+* features_info.txt
+
+The initial set of measurements contains 17 items ("features_info.txt)
+1. tBodyAcc-XYZ
+2. tGravityAcc-XYZ
+3. tBodyAccJerk-XYZ
+4. tBodyGyro-XYZ
+5. tBodyGyroJerk-XYZ
+6. tBodyAccMag
+7. tGravityAccMag
+8. tBodyAccJerkMag
+9. tBodyGyroMag
+10. tBodyGyroJerkMag
+11. fBodyAcc-XYZ
+12. fBodyAccJerk-XYZ
+13. fBodyGyro-XYZ
+14. fBodyAccMag
+15. fBodyAccJerkMag
+16. fBodyGyroMag
+17. fBodyGyroJerkMag
+
+9 measurements ('*.Mag') correspond to 18 variables from "features.txt" since we need to select std() and mean() for each measurement
+8 measurements ('*.XYZ') correspond to 48 variables since we need to select 3 (X,Y and Z) by 2 ( functions ) for each measurement
+--------------------------------------------------------
+total number of variables selected from features.txt: 66
+
+Since there were 66 variables for each of the 30 subjects for each of the 6 activities 
+the expected number of observations: 66 x 180 = 11,880 ( see "step5result.txt" )  
+
+
+Only subset of 8 files from the *.zip was used to modify the data in order to complete this project.
+------------------------------------------------------------------------------------------------------
+* UCI_HAR_Dataset/features.txt - loaded as
+'data.frame':        561 obs. of  2 variables:
+
+* UCI_HAR_Dataset/activity_labels.txt - loaded as
+'data.frame':        6 obs. of  2 variables:
+
+* UCI_HAR_Dataset/test/X_test.txt - loaded as
+'data.frame':        2947 obs. of  561 variables:
+
+* UCI_HAR_Dataset/test/y_test.txt - loaded as
+'data.frame':        2947 obs. of  1 variable:
+
+* UCI_HAR_Dataset/test/subject_test.txt - loaded as
+'data.frame':        2947 obs. of  1 variable:
+
+* UCI_HAR_Dataset/train/X_train.txt - loaded as
+'data.frame':        7352 obs. of  561 variables:
+
+* UCI_HAR_Dataset/train/y_train.txt - loaded as
+'data.frame':        7352 obs. of  1 variable:
+
+* UCI_HAR_Dataset/train/subject_train.txt - loaded as
+'data.frame':        7352 obs. of  1 variable:
+
+
+### DATA DICTIONARY 
 
 | # | Variable     | Var Description          | Value                | Val Description                              |
 |:-:|:------------ |:-------------------------|:---------------------|:---------------------------------------------|
@@ -80,6 +148,6 @@ This file describes the variables, the data, and any transformations or work tha
 ||||                fBodyGyroMagStd     |    .530|
 ||||                fBodyGyroJerkMagMean|    .542|
 ||||                fBodyGyroJerkMagStd |    .543 |                 
-| 4 |Mean| mean value of the initial measurements calculated for each feature for each activity for each subject| | |
+| 4 |Mean| mean value of the initial measurements calculated for each feature for each activity for each subject| |signed real number |
                 
 
