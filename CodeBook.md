@@ -34,12 +34,13 @@ The *.zip file was unzipped into directory "UCI_HAR_Dataset".
 * 17. fBodyGyroJerkMag
 
 #### Calculation of the expected number of feature variables
-* 9 of the 17 measurements ('*.Mag') by 2 functions: std() and mean() for each measurement  
-correspond to 18 variables from "features.txt" 
+* 9 of the 17 measurements ('*.Mag') by 2 functions ( 'std()' and 'mean()' ) for each measurement  
+correspond to 18 variables from "features.txt": 8 x 2 = 18
 
-* 8 of the 17 measurements ('*.XYZ') by 3 (X,Y and Z) by 2 ( functions ) for each measurement, the total number of variables selected 
-correspond to 48 variables from "features.txt"
-total: 66 feature variables
+* 8 of the 17 measurements ('*.XYZ') by 3 (X,Y and Z) by 2 functions for each measurement
+correspond to 48 variables from "features.txt": 8 x 3 x 2 = 48
+
+* total: 18 + 48 = 66 feature variables should be selected for this project
 
 NOTE: I have decided to to include features with 'meanFreq()' and 'angle() 
 since these were listed as separate functions in "features_info.txt" 
