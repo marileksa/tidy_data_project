@@ -39,12 +39,10 @@ correspond to 18 variables from "features.txt"
 
 * 8 measurements ('*.XYZ') by 3 (X,Y and Z) by 2 ( functions ) for each measurement, the total number of variables selected 
 correspond to 48 variables from "features.txt"
----------
-TOTAL: 66
+TOTAL: 66 feature variables
 
 #### Calculation of the expected number of observations in the final tidy data set
-* Since there are 66 variables for each of the 30 subjects for each of the 6 activities 
-----------
+* Since there are 66 variables for each of the 30 subjects for each of the 6 activities, 
 the expected number of observations: 66 x 180 = 11,880 ( see "step5result.txt" )  
 
 #### Analysis of the initial data files
