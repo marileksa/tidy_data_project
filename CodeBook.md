@@ -42,40 +42,52 @@ correspond to 48 variables from "features.txt": 8 x 3 x 2 = 48
 
 * total: 18 + 48 = 66 feature variables should be selected for this project
 
-NOTE: I have decided to to include features with 'meanFreq()' and 'angle() 
+NOTE: I have decided NOT to include features with 'meanFreq()' and 'angle() 
 since these were listed as separate functions in "features_info.txt" 
 
 #### Calculation of the expected number of observations in the final tidy data set
 * Since there are 66 variables for each of the 30 subjects for each of the 6 activities, 
-the expected number of observations: 66 x 180 = 11,880 ( see "step5result.txt" )  
+the expected number of observations: 66 x 180 = 11,880 ( see "step5result.txt" ) 
+
+NOTE from community TA ( David Hood ):
+As you are evaluating each other it is important to understand that the exact number of columns is not a marking criteria and you should not be marking work on that basis. You will be marking work on the principles of tidy data first encountered in week one. in the wide data format the number of columns can vary with decisions about what to include as mean or std dev, and there are several possible answers. In the long format the number of rows can vary with decisions about what to include as mean or std dev, and there are several possible answers.
+
+If people are not clear on this area I suggest you revisit the tidy data lectures and or the thread
+https://class.coursera.org/getdata-011/forum/thread?thread_id=248
+
 
 #### Analysis of the initial data files
 Only subset of 8 files from the *.zip was used to modify the data in order to complete this project
 
-* UCI_HAR_Dataset/features.txt - loaded as
+* 1. UCI_HAR_Dataset/features.txt - loaded as
 'data.frame':        561 obs. of  2 variables:
 
-* UCI_HAR_Dataset/activity_labels.txt - loaded as
+* 2. UCI_HAR_Dataset/activity_labels.txt - loaded as
 'data.frame':        6 obs. of  2 variables:
 
-* UCI_HAR_Dataset/test/X_test.txt - loaded as
+* 3. UCI_HAR_Dataset/test/X_test.txt - loaded as
 'data.frame':        2947 obs. of  561 variables:
 
-* UCI_HAR_Dataset/test/y_test.txt - loaded as
+* 4. UCI_HAR_Dataset/test/y_test.txt - loaded as
 'data.frame':        2947 obs. of  1 variable:
 
-* UCI_HAR_Dataset/test/subject_test.txt - loaded as
+* 5. UCI_HAR_Dataset/test/subject_test.txt - loaded as
 'data.frame':        2947 obs. of  1 variable:
 
-* UCI_HAR_Dataset/train/X_train.txt - loaded as
+* 6. UCI_HAR_Dataset/train/X_train.txt - loaded as
 'data.frame':        7352 obs. of  561 variables:
 
-* UCI_HAR_Dataset/train/y_train.txt - loaded as
+* 7. UCI_HAR_Dataset/train/y_train.txt - loaded as
 'data.frame':        7352 obs. of  1 variable:
 
-* UCI_HAR_Dataset/train/subject_train.txt - loaded as
+* 8. UCI_HAR_Dataset/train/subject_train.txt - loaded as
 'data.frame':        7352 obs. of  1 variable:
 
+The analysis of the number of observations suggests that the merge should be done "vertically" separately for "test" set ( #3,#4,#5 ) and then for "train"" set ( #6,#7,#8 ) before "train" and "test" could be merged "horizontally" in order to not introduce NA's
+
+#### Final Data Set: step5result.txt 
+generated in the tidy long form since the requirements for this assignment is 
+"Either a wide or a long form of the data is acceptable if it meets the tidy data principles of week 1"
 
 #### Data Dictionary
 

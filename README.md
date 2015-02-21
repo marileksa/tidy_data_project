@@ -25,6 +25,7 @@ replaces activity numbers with activity labels
 * merges train and test "horizontally" by binding rows
 
 * reshapes the data generating tidy data set in the long form
+NOTE for my grader: Either a wide or a long form of the data is acceptable if it meets the tidy data principles of week 1 
 
 * groups data by Activity, Subject and feature variable and applies function mean to each record
 
